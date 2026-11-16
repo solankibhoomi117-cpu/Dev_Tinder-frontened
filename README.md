@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DevTinder Frontend (matched to supplied backend)
 
 This is a complete React frontend for the routes exposed by your supplied Express backend.
@@ -21,3 +22,6 @@ This is a complete React frontend for the routes exposed by your supplied Expres
 4. Run `npm run dev` and open the Vite URL (normally `http://localhost:5173`).
 
 The browser requests include `withCredentials: true` to use the backend's login cookie.
+=======
+# Dev_Tinder
+>>>>>>> b015d741b96bbf5b01628a07912122bb96343fc4
