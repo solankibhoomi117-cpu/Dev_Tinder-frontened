@@ -54,7 +54,7 @@ export default function Signup() {
           <form onSubmit={submit} className="form-grid">
             <label>First name *<input name="firstName" required minLength="3" maxLength="10" value={form.firstName} onChange={update} /></label>
             <label>Last name *<input name="lastName" required minLength="3" maxLength="254" value={form.lastName} onChange={update} /></label>
-            <label className="span-two">Email address *<input name="email" type="email" required maxLength="20" value={form.email} onChange={update} placeholder="you@example.com" /></label>
+            <label className="span-two">Email address *<input name="email" type="email" required maxLength="254" value={form.email} onChange={update} placeholder="you@example.com" /></label>
             <label className="span-two">Password *<input name="password" type="password" required minLength="8" value={form.password} onChange={update} placeholder="Use uppercase, lowercase, number and symbol" /></label>
             <label>Age<input name="age" type="number" min="18" value={form.age} onChange={update} /></label>
             <label>Gender<select name="gender" value={form.gender} onChange={update}><option value="">Select</option><option>Male</option><option>Female</option><option>Others</option></select></label>
