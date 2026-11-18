@@ -53,12 +53,23 @@ export default function Signup() {
           <p className="eyebrow">GET STARTED</p><h2>Create account</h2><p className="muted">Add your details to join DevTinder.</p>
           <form onSubmit={submit} className="form-grid">
             <label>First name *<input name="firstName" required minLength="3" maxLength="10" value={form.firstName} onChange={update} /></label>
-            <label>Last name *<input name="lastName" required minLength="3" maxLength="20" value={form.lastName} onChange={update} /></label>
+            <label>Last name *<input name="lastName" required minLength="3" maxLength="254" value={form.lastName} onChange={update} /></label>
             <label className="span-two">Email address *<input name="email" type="email" required maxLength="20" value={form.email} onChange={update} placeholder="you@example.com" /></label>
             <label className="span-two">Password *<input name="password" type="password" required minLength="8" value={form.password} onChange={update} placeholder="Use uppercase, lowercase, number and symbol" /></label>
             <label>Age<input name="age" type="number" min="18" value={form.age} onChange={update} /></label>
             <label>Gender<select name="gender" value={form.gender} onChange={update}><option value="">Select</option><option>Male</option><option>Female</option><option>Others</option></select></label>
-            <label className="span-two">Profile photo URL<input name="photourl" type="url" value={form.photourl} onChange={update} placeholder="https://…" /></label>
+            <label className="span-two">
+  Profile photo URL
+  <input
+    name="photourl"
+    type="text"
+    inputMode="url"
+    value={form.photourl}
+    onChange={update}
+    placeholder="https://example.com/photo.jpg"
+    autoComplete="url"
+  />
+</label>
             <label className="span-two">About you<textarea name="about" minLength="5" maxLength="50" value={form.about} onChange={update} placeholder="Tell developers a little about yourself (5–50 characters)" /></label>
             <label className="span-two">Skills<input name="skills" value={form.skills} onChange={update} placeholder="React, Node.js, MongoDB (comma separated)" /></label>
             {error && <p className="form-error span-two">{error}</p>}
